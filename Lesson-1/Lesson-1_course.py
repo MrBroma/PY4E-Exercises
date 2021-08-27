@@ -1,14 +1,14 @@
-#Values and types
+# Values and types
 print(4)
 
-#To have the type of a value
+# To have the type of a value
 type("Hello, World!")
 type(17)
 type(3.2)
 
-print(1,000,000)
+print(1, 000, 000)
 
-#Variables
+# Variables
 message = "And now for something completely different"
 n = 17
 pi = 3.14159
@@ -20,7 +20,7 @@ type(message)
 type(n)
 type(pi)
 
-#Variable names and keywords
+# Variable names and keywords
 '''and       del       from      None      True
 as        elif      global    nonlocal  try
 assert    else      if        not       while
@@ -30,10 +30,10 @@ continue  finally   is        raise     async
 def       for       lambda    return    await
 '''
 
-#Statements
+# Statements
 print(1)
 x = 2
 print(x)
 
-#Asking the user for input
+# Asking the user for input
 name = input('What is your name?\n')
