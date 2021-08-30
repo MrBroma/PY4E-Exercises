@@ -27,3 +27,4 @@ temp_F = int(input("Enter a temperature in Farhenheit: "))
 temp_C = (temp_F - 32) * (5 / 9)
 round_temp_C = round(temp_C, 2)
 print(temp_F, "fahrenheit degrees is", round_temp_C, "in Celsius degrees")
+
