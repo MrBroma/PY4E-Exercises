@@ -17,15 +17,18 @@ rate2 = input("Enter the rate: ")
 try:
     hr = int(hour2)
     r = float(rate2)
+
+    if hr > 40:
+        pay = (40 * r) + ((hr - 40) * (10.5 * 1.5))
+    else:
+        pay = hr * r
+
+    print("Your pay is pay is ", pay)
+
 except:
     print("Please enter a numeric number")
 
-if hr > 40:
-    pay = (40 * r) + ((hr - 40) * (10.5 * 1.5))
-else:
-    pay = hr * r
 
-print("Your pay is pay is ", pay)
 
 # Exercise 3: Write a program to prompt for a score between 0.0 and 1.0. If the score
 # is out of range, print an error message. If the score is between 0.0 and 1.0, print
@@ -33,7 +36,7 @@ print("Your pay is pay is ", pay)
 
 score = float(input("Enter Score: "))
 if score >= 0.9:
-    print('TYour score is A')
+    print('Your score is A')
 elif score >= 0.8:
     print('Your score is B')
 elif score >= 0.7:
