@@ -73,26 +73,60 @@ jane()
 
 # Exercise 6: Rewrite your pay computation with time-and-a-half for overtime and create a function called computepay
 # which takes two parameters (hours and rate).
-hr = int(input("Enter hours: "))
-rate = float(input("Enter the rate: "))
-if hr > 40:
-    pay = (40 * rate) + ((hr - 40) * (10.5 * 1.5))
-else:
-    pay = hr * rate
 
-print(pay)
+def computepay(hour, rate):
+    if hour > 40:
+        pay = (40 * rate) + ((hour- 40) * (10.5 * 1.5))
+    else:
+        pay = hour * rate
+    return(pay)
+
+hr = int(input("Enter hours: "))
+r = float(input("Enter the rate: "))
+
+xp = computepay(hr, r)
+
+print("Your pay is: ", xp)
+
+# Autograder code for exercice 6
+def computepay (hours, rate) :
+    # print("In computepay", hours, rate)
+    if hours > 40 :
+        reg = rate * hours
+        otp = (hours - 40.0) * (rate * 0.5)
+        pay = reg + otp
+    else:
+        pay = hours * rate
+    # print("Returning",pay)
+    return pay
+    
+sh = input("Enter Hours: ")
+sr = input("Enter Rate: ")
+fh = float(sh)
+fr = float(sr)
+# print(fh,fr)
+xp = computepay(fh,fr)
+
+print("Pay",xp)
 
 # Exercise 7: Rewrite the grade program from the previous chapter using a function called computegrade that takes
 # a score as its parameter and returns a grade as a string.
 
-score = float(input("Enter Score: "))
-if score >= 0.9:
-    print('Your score is A')
-elif score >= 0.8:
-    print('Your score is B')
-elif score >= 0.7:
-    print('Your score isC')
-elif score >= 0.6:
-    print('Your score is D')
-else:
-    print('Your score is F')
+def computegrade(score):
+    if score >= 0.9:
+        grade = "A"
+    elif score >= 0.8:
+        grade = "B"
+    elif score >= 0.7:
+        grade = "C"
+    elif score >= 0.6:
+        grade = "D"
+    elif score >= 0.5:
+        grade = "E"
+    else:
+        grade = "F"
+
+sr = float(input("Enter Score: "))
+result = computegrade(sr)
+print("Your grade is ", result)
+
