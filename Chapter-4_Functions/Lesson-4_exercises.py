@@ -113,20 +113,38 @@ print("Pay",xp)
 # a score as its parameter and returns a grade as a string.
 
 def computegrade(score):
-    if score >= 0.9:
+    if sc < 0.0 or sc > 1.0:
+        print("Error")
+        return
+    elif sc >= 0.9:
         grade = "A"
-    elif score >= 0.8:
+        return grade
+    elif sc >= 0.8:
         grade = "B"
-    elif score >= 0.7:
+        return grade
+    elif sc >= 0.7:
         grade = "C"
-    elif score >= 0.6:
+        return grade
+    elif sc >= 0.6:
         grade = "D"
-    elif score >= 0.5:
-        grade = "E"
+        return grade
     else:
         grade = "F"
+        return grade
 
-sr = float(input("Enter Score: "))
-result = computegrade(sr)
-print("Your grade is ", result)
 
+score = input("Enter score: ")
+while True:
+    try:
+        sc = float(score)
+    except ValueError:
+        print("Error, Please Enter numeric input")
+        score = input("Enter score: ")
+    if ValueError is True:
+        continue
+    else:
+        break
+
+
+gr = computegrade(sc)
+print("Grade: ", gr)
